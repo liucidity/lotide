@@ -1,5 +1,5 @@
 // import our assertEqual module
-const assertEqual = require('./assertEqual');
+// const assertEqual = require('./assertEqual');
 
 const eqArrays = function(arr1,arr2) {
   //check if arrays are equal length
@@ -16,10 +16,13 @@ const eqArrays = function(arr1,arr2) {
   return true;
 };
 
-assertEqual.assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => true
-assertEqual.assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false); // => false
 
-assertEqual.assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // => true
-assertEqual.assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false);// => false
+module.exports = {eqArrays:eqArrays};
 
-assertEqual.assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+// assertEqual.assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => true
+// assertEqual.assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false); // => false
+
+// assertEqual.assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // => true
+// assertEqual.assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false);// => false
+
+// assertEqual.assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
