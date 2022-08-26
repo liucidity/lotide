@@ -2,24 +2,41 @@ const assertEqual = require('./assertEqual');
 const eqArrays = require('./eqArrays');
 
 const eqObjects = function(object1, object2) {
-  let result = false;
-  if (Object.keys(object1).length === Object.keys(object2).length) {
-    
-    for (let key in object1) {
-
-      if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
-        result = eqArrays.eqArrays(object1[key],object2[key]);
-
-      } else {
-        
-        if (object1[key] === object2[key]) {
-          result = true;
-        }
-      }
+  if (Object.keys(object1).length !== Object.keys(object2).length) return false;
+  for (let key in object1) {
+    if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
+      if (!eqArrays.eqArrays(object1[key],object2[key])) return false;
     }
+    if (!eqObjects(object1[key],object2[key])) return false;
   }
-  return result;
+    
+  return true;
 };
+
+  
+// let result = false;
+// if (Object.keys(object1).length === Object.keys(object2).length) {
+  
+//   for (let key in object1) {
+
+//     if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
+//       result = eqArrays.eqArrays(object1[key],object2[key]);
+
+//     } else {
+      
+//       if (object1[key] === object2[key]) {
+//         result = true;
+//       }
+//     }
+//   }
+// }
+// return result;
+
+assertEqual.assertEqual(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }),true);// => true
+assertEqual.assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }),false);
+assertEqual.assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }),false);
+
+
 
 // const ab = { a: "1", b: "2" };
 // const ba = { b: "2", a: "1" };
