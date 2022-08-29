@@ -7,12 +7,4 @@ const tail = function(array) {
   return tailArray;
 };
 
-//Test cases
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words);
-assertEqual.assertEqual(words.length,3);
-
-//An array with only one element should yield an empty array for its tail
-console.log(tail([1]));
-// An empty array should yield an empty array for its tail
-console.log(tail([]));
+module.exports = tail;

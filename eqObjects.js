@@ -9,7 +9,6 @@ const eqObjects = function(object1, object2) {
     }
     if (!eqObjects(object1[key],object2[key])) return false;
   }
-    
   return true;
 };
 

@@ -2,6 +2,7 @@
 const assertArraysEqual = require('./assertArraysEqual');
 
 const without = function(source, itemsToRemove) {
+  //create copy of source via ES6
   let output = [...source];
 
   for (let item of itemsToRemove) {
