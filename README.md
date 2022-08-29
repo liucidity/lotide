@@ -31,17 +31,18 @@ The following functions are currently implemented:
 * `middle(...)`: retrieves middle elements in an array, will return an array with two elements if original array is of even length.
 * `assertEqual(...)`: Colorful Assertion test, checks if two values are === equal
 * `assertArraysEqual(...)`: Colorful Assertion test to be used on array values. checks if two arrays are equal.
+
+* `countOnly(...)`: counts items in array based on objects marked as true
+* `eqArrays(...)`: checks recursively if arrays are equal
+* `eqObjects(...)`: checks objects recursively if they are equal
+* `letterPositions(...)`: stores character letter positions from a string
+* `flatten(...)`: flattens arrays one layer
+* `findKeyByValue(...)`: retrieves keys from object using a value
   
 The following functions are working, but do not have tests completed:
   assertObjectsEqual,
   countLetters,
-  countOnly,
-  eqArrays,
-  eqObjects,
   findKey,
-  findKeyByValue,
-  flatten,
-  letterPositions,
   map,
   takeUntil,
   without,

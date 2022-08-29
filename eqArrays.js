@@ -1,8 +1,6 @@
 // import our assertEqual module
 // const assertEqual = require('./assertEqual');
 
-const assertEqual = require("./assertEqual");
-
 const eqArrays = function(arr1,arr2) {
   //check if arrays are equal length
   if (arr1.length !== arr2.length) {
@@ -16,12 +14,9 @@ const eqArrays = function(arr1,arr2) {
       if (arr1[i] !== arr2[i]) {
         return false;
       }
-    }
-    // console.log(`${i} is an array`);
-    if (!eqArrays(arr1[i],arr2[i])) return false;
+    } else if (!eqArrays(arr1[i],arr2[i])) return false;
   }
   return true;
 };
 
 module.exports = eqArrays;
-
