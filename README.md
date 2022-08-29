@@ -26,10 +26,6 @@ This project was created and published by me as part of my learnings at Lighthou
 
 The following functions are currently implemented:
 
-* `function1(...)`: description
-* `function2(...)`: description
-* `function3(...)`: description
-
 * `head(...)`: retrieves head value or first element in an array
 * `tail(...)`: retrieves tail values or elements in array starting from index 1
 * `middle(...)`: retrieves middle elements in an array, will return an array with two elements if original array is of even length.
