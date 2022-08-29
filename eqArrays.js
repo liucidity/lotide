@@ -20,7 +20,6 @@ const eqArrays = function(arr1,arr2) {
     // console.log(`${i} is an array`);
     if (!eqArrays(arr1[i],arr2[i])) return false;
   }
-  
   return true;
 };
 
