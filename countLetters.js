@@ -9,4 +9,4 @@ const countLetters = function(sentence) {
   return result;
 };
 
-console.log(countLetters('hello'));
+module.exports = countLetters;
